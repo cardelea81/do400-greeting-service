@@ -27,7 +27,9 @@ pipeline{
             oc project cardelea81-greetings
             oc start-build greeting-service --follow --wait
         '''
-    }
+     }
+   
+   }  
+ }
 }
-    }
-}
+
