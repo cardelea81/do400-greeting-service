@@ -21,6 +21,13 @@ pipeline{
             }
         }
 
-        // Add the "Deploy" stage here
+        stage('Deploy') {
+    steps {
+        sh '''
+            oc project cardelea81-greetings
+            oc start-build greeting-service --follow --wait
+        '''
+    }
+}
     }
 }
